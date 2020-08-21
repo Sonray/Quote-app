@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HighlighterDirective } from './highlighter.directive';
+import { QuoteComponent } from './quote/quote.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HighlighterDirective
+    HighlighterDirective,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
