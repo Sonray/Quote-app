@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Angular-IP"
+    }
+  },
+  "defaultProject": "Angular-IP",
+  "cli": {
+    "analytics": "099a65b2-f3ef-4a88-8ca9-73dd91f0625a"
+  }
 }
