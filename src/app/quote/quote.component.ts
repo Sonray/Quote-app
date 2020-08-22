@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CustomQoute } from '../custom-qoute'
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
+import { QuoteConstructor } from '../quote-constructor'
 
 @Component({
   selector: 'app-quote',
@@ -9,16 +9,12 @@ import { CustomQoute } from '../custom-qoute'
 export class QuoteComponent implements OnInit {
 
   message: String = "";
-  breda = new CustomQoute("nan", "kgh", "ghgk", "fgy");
-  quoteArray : Array<CustomQoute>;
-  
-  loadQuote(){
-      this.quoteArray = [
-        new CustomQoute("nan", "kgh", "ghgk", "fgy"),
-        new CustomQoute("nan", "kgh", "ghgk", "fgy"),
-        new CustomQoute("nan", "kgh", "ghgk", "fgy")
-      ]
-      this.message = this.quoteArray[0].quoteAurthor
+  quoteArray = new QuoteConstructor("", "", "", new Date());
+
+  @Output() getForm = new EventEmitter<QuoteConstructor>();
+
+  submitQuote(){
+    this.getForm.emit(this.quoteArray);
   }
   
   constructor() { }

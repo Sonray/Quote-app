@@ -1,27 +1,30 @@
 <p>quote works!</p>
 
-{{breda.name}}
+{{quoteArray.userName}}
+{{quoteArray.quoteDescription}}
+{{quoteArray.quoteAuthor}}
+{{quoteArray.quoteDay}}
 
-<form  >
+<form (ngSubmit)='submitQuote()' >
     
     <div class="form-group">
 
         <label for="names">Enter your Name</label>
 
         <div>
-            <input type="text" name="names" id="name" >
+            <input type="text" name="names" id="name" [(ngModel)] = 'quoteArray.userName' >
         </div>
         
         <label for="quote">Enter your Quote</label>
 
         <div>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" [(ngModel)] = 'quoteArray.quoteDescription'></textarea>
         </div>
         
-        <label for="quote-author">Enter your Name</label>
+        <label for="quote-author">Enter Name of the Quote Aurthor</label>
 
         <div>
-            <input type="text" name="quote-author" id="name">
+            <input type="text" name="quote-author" id="name" [(ngModel)] = 'quoteArray.quoteAuthor'>
         </div>
         
     </div>
