@@ -8,12 +8,11 @@ import { QuoteConstructor } from '../quote-constructor'
 })
 export class QuoteComponent implements OnInit {
 
-  message: String = "";
   quoteArray = new QuoteConstructor("", "", "", new Date());
 
   @Output() getForm = new EventEmitter<QuoteConstructor>();
 
-  submitQuote(){
+  onSubmit(){
     this.getForm.emit(this.quoteArray);
   }
   

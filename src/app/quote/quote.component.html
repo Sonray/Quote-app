@@ -1,32 +1,36 @@
 <p>quote works!</p>
 
+
 {{quoteArray.userName}}
 {{quoteArray.quoteDescription}}
 {{quoteArray.quoteAuthor}}
 {{quoteArray.quoteDay}}
 
-<form (ngSubmit)='submitQuote()' >
+<form (ngSubmit)='onSubmit()' #quoteForm='ngForm'>
     
     <div class="form-group">
 
-        <label for="names">Enter your Name</label>
-
         <div>
-            <input type="text" name="names" id="name" [(ngModel)] = 'quoteArray.userName' >
+            <label for="names">Enter your Name</label>
+            <input type="text" name="names" id="names" #names='ngModel' [(ngModel)] = 'quoteArray.userName' >
+            <div [hidden]="names.valid || names.pristine" >
+                <p>Username is required</p>
+                {{quoteArray.userName}}
+              </div>
         </div>
         
-        <label for="quote">Enter your Quote</label>
+        <label for="text">Enter your Quote</label>
 
         <div>
-            <textarea name="" id="" cols="30" rows="10" [(ngModel)] = 'quoteArray.quoteDescription'></textarea>
+            <textarea name="text" #text='ngModel' id="text" cols="30" rows="10" [(ngModel)] = 'quoteArray.quoteDescription'></textarea>
         </div>
         
         <label for="quote-author">Enter Name of the Quote Aurthor</label>
 
         <div>
-            <input type="text" name="quote-author" id="name" [(ngModel)] = 'quoteArray.quoteAuthor'>
+            <input type="text" name="quote" #quote='ngModel' id="quote" [(ngModel)] = 'quoteArray.quoteAuthor'>
         </div>
         
     </div>
-    <button type="submit" class="btn btn-success">Add Quote</button>
+    <button type="submit" class="btn btn-success" >Add Quote</button>
 </form>
