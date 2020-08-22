@@ -8,6 +8,18 @@ import { CustomQoute } from '../custom-qoute'
 })
 export class QuoteComponent implements OnInit {
 
+  message: String = "";
+  breda = new CustomQoute("nan", "kgh", "ghgk", "fgy");
+  quoteArray : Array<CustomQoute>;
+  
+  loadQuote(){
+      this.quoteArray = [
+        new CustomQoute("nan", "kgh", "ghgk", "fgy"),
+        new CustomQoute("nan", "kgh", "ghgk", "fgy"),
+        new CustomQoute("nan", "kgh", "ghgk", "fgy")
+      ]
+      this.message = this.quoteArray[0].quoteAurthor
+  }
   
   constructor() { }
 
