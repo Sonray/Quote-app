@@ -3,6 +3,8 @@ export class QuoteConstructor {
         public quoteDescription: string,
         public userName: string,
         public quoteAuthor: string,
-        public quoteDay: Date
+        public quoteDay: Date,
+        public like: number,
+        public dislike: number
     ){}
 }
