@@ -16,7 +16,7 @@ export class ShowQuoteComponent implements OnInit {
   }
 
   like(){
-    this.quoted.like += 1 ;
+    this.quoted.like += 1;
   }
 
   dislike(){
