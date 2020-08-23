@@ -5,6 +5,8 @@
 {{quoteArray.quoteDescription}}
 {{quoteArray.quoteAuthor}}
 {{quoteArray.quoteDay}}
+{{quoteArray.like}}
+{{quoteArray.dislike}}
 
 <form (ngSubmit)='onSubmit()' #quoteForm='ngForm'>
     
@@ -13,10 +15,6 @@
         <div>
             <label for="names">Enter your Name</label>
             <input type="text" name="names" id="names" #names='ngModel' [(ngModel)] = 'quoteArray.userName' >
-            <div [hidden]="names.valid || names.pristine" >
-                <p>Username is required</p>
-                {{quoteArray.userName}}
-              </div>
         </div>
         
         <label for="text">Enter your Quote</label>
