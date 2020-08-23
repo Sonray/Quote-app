@@ -15,6 +15,14 @@ export class ShowQuoteComponent implements OnInit {
     this.quotecomplete.emit(reader);
   }
 
+  like(){
+    this.quoted.like += 1 ;
+  }
+
+  dislike(){
+    this.quoted.dislike += 1;
+  }
+
 
 
   constructor() { }

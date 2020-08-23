@@ -8,7 +8,7 @@ import { QuoteConstructor } from '../quote-constructor'
 })
 export class QuoteComponent implements OnInit {
 
-  quoteArray = new QuoteConstructor("", "", "", new Date());
+  quoteArray = new QuoteConstructor("", "", "", new Date(),0,0);
 
   @Output() getForm = new EventEmitter<QuoteConstructor>();
 
