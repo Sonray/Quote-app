@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { QuoteConstructor } from '../quote-constructor'
 
 @Component({
   selector: 'app-show-quote',
@@ -6,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-quote.component.css']
 })
 export class ShowQuoteComponent implements OnInit {
+
+  @Input() quoted: QuoteConstructor;
+  @Output() quotecomplete = new EventEmitter<boolean>();
+
+  deleteQuote(reader: boolean){
+    this.quotecomplete.emit(reader);
+  }
+
+
 
   constructor() { }
 
