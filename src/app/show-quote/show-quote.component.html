@@ -4,10 +4,10 @@
     <div class="footer">
         <div class="left">
             <div id="like">
-                <img src="../assets/Emoticonshd.com-Emoji-Emoticon-Like-Liked-Support-Thumbs.ico" alt="" id="like" [(click) = 'like()'>{{quoted.like}}
+                <img src="../assets/Emoticonshd.com-Emoji-Emoticon-Like-Liked-Support-Thumbs.ico" alt="" id="like" (click) = 'like()'>{{quoted.like}}
             </div>
             <div id="dislike">
-                <img src="../assets/Fatcow-Farm-Fresh-Thumb-down.ico" alt="" id="dislike">
+                <img src="../assets/Fatcow-Farm-Fresh-Thumb-down.ico" alt="" id="dislike" (click)= "dislike()">{{quoted.dislike}}
             </div>
         </div>
         <div class="right">
