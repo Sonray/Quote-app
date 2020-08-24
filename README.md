@@ -1,14 +1,11 @@
 # David Okwacha 
 
-## Delani Studio
+## quotes app
 
 ## Description
-Delani Studio is a company that uses teechnology to make businesses and organisations
-achive more in their daily tasks. This is by making for them apps or by managing their 
-databases.
+Quotes app allows you to store your qoutes and upvote.
 
 #### link to site
-https://sonray.github.io/Delani-Studio/
 
 ## About Author
 Author's name is David Okwacha
@@ -16,13 +13,14 @@ I have worked on some major projects in web development which include;
 1 . Fitness-hub
 2 . Group DAlex
 3 . Birth-Break
+4 . Delani-studio
 
 ## Setup/Installation Requirements
 Set up a web browser and you are good to go. Launch the website, enter your name, email and 
 message to inform the company
 
 ## BDD
-Birth-break is a BDD that allows users to enter their birthdays and get their Ghana Akan names
+Quotes app is a BDD that allows you to store your qoutes and upvote.
 
 ### Technologies Used
 #### 1. HTML
@@ -32,13 +30,13 @@ Birth-break is a BDD that allows users to enter their birthdays and get their Gh
 #### 5. angular
 
 
-
 ## Support and contact details
 In case you run into any issues or have questions, ideas or concerns. Contact David Okwacha
 
 E-mail - davidokwacha@gmail.com
 Facebook - David Okwacha
 Youtube - David Okwacha
+
 ## License
 MIT License
 
