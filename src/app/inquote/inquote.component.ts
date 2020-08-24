@@ -21,6 +21,17 @@ export class InquoteComponent implements OnInit {
     
   }
 
+  addQuote(quotes){
+    let quoteLength = this.quotes.length;
+    quotes.id = quoteLength + 1;
+    quoteLength.completeDate = new Date(quotes.completeDate);
+    this.quotes.push(quote);
+  }
+
+  displayQuote(index){
+    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  }
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,7 @@
 <p>inquote works!</p>
+<div *ngFor = 'let quote of quotes; let i=index'>
+    <p>{{quote.quoteDescription}}</p>
+    <p>{{quote.userName}} {{quote.quoteDay}}</p>
+    <app-show-quote [quoted]='quote'  (quoted)='quoteDelete($event,i)'></app-show-quote>
+    <app-quote ></app-quote>
+</div>
