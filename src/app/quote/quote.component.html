@@ -1,34 +1,21 @@
-<p>quote works!</p>
-
-
-{{quoteArray.userName}}
-{{quoteArray.quoteDescription}}
-{{quoteArray.quoteAuthor}}
-{{quoteArray.quoteDay}}
-{{quoteArray.like}}
-{{quoteArray.dislike}}
-
-<form (ngSubmit)='onSubmit()' #quoteForm='ngForm'>
-    
-    <div class="form-group">
-
-        <div>
-            <label for="names">Enter your Name</label>
-            <input type="text" name="names" id="names" #names='ngModel' [(ngModel)] = 'quoteArray.userName' >
+ 
+<div class="overlay">
+    <div class="container">
+    <h1>Quote-App
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div *ngFor='let quote of quotes;let i=index' class="card">
+          <div class="card-body">
+            <p class="card-text">{{quote.quoteAuthor}}</p>
+          </div>
+          <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.userName}}</span><span id="date"><span id="datecolor">{{quote.quoteDay|date}}</span></span></span>
+           <div>
+            <app-show-quote [quoted]='quote' (quotecomplete)='quoteDelete($event,i)'></app-show-quote>
+         </div>
         </div>
-        
-        <label for="text">Enter your Quote</label>
-
-        <div>
-            <textarea name="text" #text='ngModel' id="text" cols="30" rows="10" [(ngModel)] = 'quoteArray.quoteDescription'></textarea>
-        </div>
-        
-        <label for="quote-author">Enter Name of the Quote Aurthor</label>
-
-        <div>
-            <input type="text" name="quote" #quote='ngModel' id="quote" [(ngModel)] = 'quoteArray.quoteAuthor'>
-        </div>
-        
-    </div>
-    <button type="submit" class="btn btn-success" >Add Quote</button>
-</form>
+      </div>
+      <div class="col-md-12">
+        <app-inquote (getForm)="addQuote($event)"></app-inquote>
+      </div>
+  </div>

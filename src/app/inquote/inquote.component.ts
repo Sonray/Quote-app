@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { QuoteConstructor } from '../quote-constructor';
 
 @Component({
@@ -8,29 +8,15 @@ import { QuoteConstructor } from '../quote-constructor';
 })
 export class InquoteComponent implements OnInit {
 
-  quotes: QuoteConstructor[] = [];
 
-  quoteDelete(getForm, index){
+  quoteArray = new QuoteConstructor(0, '', '', '', new Date(), 0, 0 );
 
-    if (getForm) {
-      let theDelete: boolean = confirm(`Do you want to delete the quote?`)
-      if (theDelete) {
-        this.quotes.splice(index, 1);
-      }
-    }
-    
+  @Output() getForm = new EventEmitter<QuoteConstructor>();
+
+  onSubmit(){
+    this.getForm.emit(this.quoteArray);
   }
-
-  addQuote(quotes){
-    let quoteLength = this.quotes.length;
-    quotes.id = quoteLength + 1;
-    quoteLength.completeDate = new Date(quotes.completeDate);
-    this.quotes.push(quote);
-  }
-
-  displayQuote(index){
-    this.quotes[index].showQuote = !this.quotes[index].showQuote;
-  }
+  
 
   constructor() { }
 

@@ -8,14 +8,31 @@ import { QuoteConstructor } from '../quote-constructor';
 })
 export class QuoteComponent implements OnInit {
 
-  quoteArray = new QuoteConstructor("", "", "", new Date(),0,0);
 
-  @Output() getForm = new EventEmitter<QuoteConstructor>();
+  quotes: QuoteConstructor[] = [];
 
-  onSubmit(){
-    this.getForm.emit(this.quoteArray);
+  quoteDelete(quotecomplete, index){
+
+    if (quotecomplete) {
+      let theDelete: boolean = confirm(`Do you want to delete the quote?`)
+      if (theDelete) {
+        this.quotes.splice(index, 1);
+      }
+    }
+    
   }
-  
+
+  addQuote(quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+    }
+
+  displayQuote(index){
+    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
