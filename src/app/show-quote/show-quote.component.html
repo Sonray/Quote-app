@@ -1,9 +1,9 @@
 
     <p> Aurthor: {{quoted.userName}}Posted: {{quoted.quoteDay | date }} days ago.</p>
         
-    <img src="..../assets/Emoticonshd.com-Emoji-Emoticon-Like-Liked-Support-Thumbs.ico" alt="" id="like" (click) = 'like()' >{{quoted.like}}
+    <span class="glyphicon glyphicon-thumbs-up" alt="" id="like" (click) = 'like()' ></span>{{quoted.like}}
             
-    <img src="..../assets/Fatcow-Farm-Fresh-Thumb-down.ico" alt="" id="dislike" (click)= "dislike()">{{quoted.dislike}}
+    <span class="glyphicon glyphicon-thumbs-down" alt="" id="dislike" (click)= "dislike()"></span>{{quoted.dislike}}
           
-    <img src="..../assets/Trash-icon.png" alt="" id="delete" (click)="deleteQuote(true)">
+    <span class="glyphicon glyphicon-trash" alt="" id="delete" (click)="deleteQuote(true)"></span>
       
