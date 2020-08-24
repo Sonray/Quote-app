@@ -1,14 +1,9 @@
-<p>show-quote works!</p>
 
-        <p> Aurthor: {{quoted.userName}}Posted: {{quoted.quoteDay | date }} days ago.</p>
+    <p> Aurthor: {{quoted.userName}}Posted: {{quoted.quoteDay | date }} days ago.</p>
         
-                <img src="../assets/Emoticonshd.com-Emoji-Emoticon-Like-Liked-Support-Thumbs.ico" alt="" id="like" (click) = 'like()'>{{quoted.like}}
+    <img src="../assets/Emoticonshd.com-Emoji-Emoticon-Like-Liked-Support-Thumbs.ico" alt="" id="like" (click) = 'like()' >{{quoted.like}}
             
-                <img src="../assets/Fatcow-Farm-Fresh-Thumb-down.ico" alt="" id="dislike" (click)= "dislike()">{{quoted.dislike}}
+    <img src="../assets/Fatcow-Farm-Fresh-Thumb-down.ico" alt="" id="dislike" (click)= "dislike()">{{quoted.dislike}}
           
-                <img src="../assets/Trash-icon.png" alt="" id="delete" (click)="deleteQuote(true)">
-          
-{{quoted.like}}
-{{quoted.dislike}}
-{{quoted.userName}}
-{{quoted.quoteDay | date }}
+    <img src="../assets/Trash-icon.png" alt="" id="delete" (click)="deleteQuote(true)">
+      

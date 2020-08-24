@@ -9,6 +9,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { ShowQuoteComponent } from './show-quote/show-quote.component';
 import { InquoteComponent } from './inquote/inquote.component';
 import { DatePipe } from './date.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DatePipe } from './date.pipe';
     QuoteComponent,
     ShowQuoteComponent,
     InquoteComponent,
-    DatePipe
+    DatePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

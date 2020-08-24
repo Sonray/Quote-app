@@ -33,6 +33,8 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showQuote = !this.quotes[index].showQuote;
   }
 
+  qouted: boolean;
+  
   constructor() { }
 
   ngOnInit(): void {

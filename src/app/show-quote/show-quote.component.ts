@@ -10,6 +10,7 @@ export class ShowQuoteComponent implements OnInit {
 
   @Input() quoted: QuoteConstructor;
   @Output() quotecomplete = new EventEmitter<boolean>();
+  
 
   deleteQuote(reader: boolean){
     this.quotecomplete.emit(reader);
@@ -22,6 +23,7 @@ export class ShowQuoteComponent implements OnInit {
   dislike(){
     this.quoted.dislike += 1;
   }
+
 
 
 

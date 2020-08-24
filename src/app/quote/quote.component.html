@@ -1,11 +1,11 @@
  
 <div class="overlay">
     <div class="container">
-    <h1>Quote-App
+    <h1 appHighlight>Quote-App</h1>
     <hr>
     <div class="row">
-      <div class="col-md-12">
-        <div *ngFor='let quote of quotes;let i=index' class="card">
+      <div class="col-md-12" appHighlight>
+        <div *ngFor='let quote of quotes;let i=index' class="card" appHighlight>
           <div class="card-body">
             <p class="card-text">{{quote.quoteAuthor}}</p>
           </div>
