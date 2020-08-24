@@ -1,9 +1,9 @@
 
     <p> Aurthor: {{quoted.userName}}Posted: {{quoted.quoteDay | date }} days ago.</p>
         
-    <span class="glyphicon glyphicon-thumbs-up" alt="" id="like" (click) = 'like()' ></span>{{quoted.like}}
+    <i class="fas fa-thumbs-up" id="like" (click) = 'like()' ></i>{{quoted.like}}
             
-    <span class="glyphicon glyphicon-thumbs-down" alt="" id="dislike" (click)= "dislike()"></span>{{quoted.dislike}}
+    <span class="fa fa-thumbs-up" alt="" id="dislike" (click)= "dislike()"></span>{{quoted.dislike}}
           
-    <span class="glyphicon glyphicon-trash" alt="" id="delete" (click)="deleteQuote(true)"></span>
+    <span class="fa fa-thumbs-up" alt="" id="delete" (click)="deleteQuote(true)"></span>
       
