@@ -6,6 +6,7 @@
 Quotes app allows you to store your qoutes and upvote.
 
 #### link to site
+https://sonray.github.io/Quote-app/
 
 ## About Author
 Author's name is David Okwacha
